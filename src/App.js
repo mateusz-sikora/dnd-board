@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import HTML5Backend from 'react-dnd-html5-backend';

@@ -14,7 +14,7 @@ import { DragTypes } from '../task/const';
 import { moveHoverCard } from './actionCreators';
 import { moveTask, addTask } from '../task/actionCreators';
 
-import { collect, getPositionIndex, itemTarget } from './utils';
+import { collect, itemTarget } from './utils';
 
 
 class CardsContainer extends Component {
@@ -55,7 +55,6 @@ class CardsContainer extends Component {
   }
 
   render() {
-    console.log(this.props.gridSpacing);
     return this.props.connectDropTarget(
       <div>
         <Grid
@@ -133,7 +132,6 @@ class Column extends Component {
           </Grid>
           <Grid item>
             <Button
-              variant="contained"
               color="primary"
               onClick={this.addTask.bind(this)}
               variant="outlined"

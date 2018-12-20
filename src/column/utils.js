@@ -6,7 +6,7 @@ export const collect = (connect, monitor) => {
   }
 }
 
-export const getPositionIndex = (monitor, component) => {
+const getPositionIndex = (monitor, component) => {
   const initialClientOffset = monitor.getInitialSourceClientOffset();
   const delta = monitor.getDifferenceFromInitialOffset();
 
@@ -37,10 +37,8 @@ export const itemTarget = {
   hover(props, monitor, component){
     const positionIndex = getPositionIndex(monitor, component);
     const hoverCard = component.props.hoverCard;
-    const task = monitor.getItem();
 
     if ((component.props.columnId !== hoverCard.columnId) || (positionIndex !== hoverCard.positionIndex)){
-      console.log(hoverCard);
       component.props.moveHoverCard(
         component.props.columnId,
         positionIndex
