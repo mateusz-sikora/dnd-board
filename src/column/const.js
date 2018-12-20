@@ -1,0 +1,1 @@
+export const MOVE_HOVER_CARD = 'MOVE_HOVER_CARD';
